@@ -120,6 +120,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <Resource Include="background.jpg" />
+    <Content Include=".gitignore" />
     <Content Include="PersonDB.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

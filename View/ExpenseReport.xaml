@@ -7,19 +7,10 @@
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="500"
       Title="ExpenseIt - View Expense">
+
+    
+    
     <Grid>
-        <!--Tempaltes to display expense report data--> 
-        <Grid.Resources>
-            <!--Reason item template-->
-            <DataTemplate x:Key="typeItemTemplate">
-                <Label Content="{Binding XPath=@ExpenseType}" />
-            </DataTemplate>
-            <!--Amount item tempalte--> 
-            <DataTemplate x:Key="amountItemTemplate">
-                <Label Content="{Binding XPath=@ExpenseAmount}"/>
-            </DataTemplate>
-        </Grid.Resources>
-        
         <Grid.Background>
             <ImageBrush ImageSource="../images/background.jpg" />
         </Grid.Background>
@@ -67,8 +58,8 @@
                           AutoGenerateColumns="False" RowHeaderWidth="0">
                     
                     <DataGrid.Columns>
-                        <DataGridTemplateColumn Header="ExpenseType" CellTemplate="{StaticResource typeItemTemplate}" />
-                        <DataGridTemplateColumn Header="Amount" CellTemplate="{StaticResource amountItemTemplate}" />
+                        <DataGridTemplateColumn Header="ExpenseType" />
+                        <DataGridTemplateColumn Header="Amount" />
                     </DataGrid.Columns>
                     
                 </DataGrid>

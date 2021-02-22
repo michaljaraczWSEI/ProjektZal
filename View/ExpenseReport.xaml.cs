@@ -20,14 +20,15 @@ namespace ExpenseIt
     /// </summary>
     public partial class ExpenseReport : Page
     {
+        private PersonModel _selectedUser;
         public ExpenseReport()
         {
             InitializeComponent();
         }
 
-        public ExpenseReport(object data):this()
+        public ExpenseReport(PersonModel data):this()
         {
-            this.DataContext = data;
+            this._selectedUser = data;
         }
     }
 }

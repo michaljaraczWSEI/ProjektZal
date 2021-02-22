@@ -24,6 +24,13 @@ namespace ExpenseIt
                 return cnn.Query<PersonModel>("select * from Person", new DynamicParameters()).ToList();
             };
         }
+        public PersonModel LoadUserById(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                return (PersonModel)cnn.Query<PersonModel>($"select * from Person where id Id={id}", new DynamicParameters());
+            };
+        }
         public void SavePerson(PersonModel person)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

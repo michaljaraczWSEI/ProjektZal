@@ -29,7 +29,7 @@ namespace ExpenseIt
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ExpenseReport expenseReportPage = new ExpenseReport(this.peopleListBox.SelectedItem);
+            ExpenseReport expenseReportPage = new ExpenseReport((PersonModel)this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
         }
     }

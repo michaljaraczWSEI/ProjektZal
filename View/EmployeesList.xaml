@@ -7,8 +7,12 @@
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="500"
       Title="ExpenseIt - Home">
-    
-    <Grid Margin="10,0,10,10">
+
+    <Page.DataContext>
+        <local:EmployeesListViewModel/>
+    </Page.DataContext>
+
+    <Grid >
 
         
         <Grid.Background>
@@ -33,7 +37,7 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHomeHeader}">
             <Label Style="{StaticResource listHomeHeaderText}">List of persons employed</Label>
         </Border>
-        <ListBox Style="{StaticResource listHomeBody}"  Name="peopleListBox" Grid.Column="1" Grid.Row="2" DisplayMemberPath="FirstName" />
+        <ListBox Style="{StaticResource listHomeBody}"  Name="peopleListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{ Binding Users }" DisplayMemberPath="FirstName" />
 
 
 

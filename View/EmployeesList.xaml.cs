@@ -22,14 +22,10 @@ namespace ExpenseIt
     /// </summary>
     public partial class EmployeesList: Page
     {
-        private DataBaseService _dbService;
-        private ObservableCollection<PersonModel> _users = new ObservableCollection<PersonModel>();
+
         public EmployeesList()
         {
-            _dbService = new DataBaseService();
-            _users = new ObservableCollection<PersonModel>(_dbService.LoadUsers());
             InitializeComponent();
-            peopleListBox.ItemsSource = _users;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

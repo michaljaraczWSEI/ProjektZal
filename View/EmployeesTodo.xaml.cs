@@ -18,9 +18,9 @@ namespace ExpenseIt
     /// <summary>
     /// Logika interakcji dla klasy Todo.xaml
     /// </summary>
-    public partial class Todo : Page
+    public partial class EmployeesTodo : Page
     {
-        public Todo()
+        public EmployeesTodo()
         {
             InitializeComponent();
         }

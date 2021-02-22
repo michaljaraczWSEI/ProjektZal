@@ -18,14 +18,14 @@ namespace ExpenseIt
     /// <summary>
     /// Logika interakcji dla klasy ExpenseReportPage.xaml
     /// </summary>
-    public partial class ExpenseReportPage : Page
+    public partial class ExpenseReport : Page
     {
-        public ExpenseReportPage()
+        public ExpenseReport()
         {
             InitializeComponent();
         }
 
-        public ExpenseReportPage(object data):this()
+        public ExpenseReport(object data):this()
         {
             this.DataContext = data;
         }
